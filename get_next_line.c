@@ -6,18 +6,16 @@
 /*   By: fsabatie <fsabatie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 17:09:53 by fsabatie          #+#    #+#             */
-/*   Updated: 2017/11/28 21:49:47 by fsabatie         ###   ########.fr       */
+/*   Updated: 2017/11/28 21:56:34 by fsabatie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <sys/uio.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include "libft/libft.h"
 #include "get_next_line.h"
-#include <stdlib.h>
 
 t_list		*find_list(t_list *list, int fd)
 {
@@ -74,9 +72,3 @@ int			get_next_line(const int fd, char **line)
 	return (check_line((char**)&(find_list(list, fd)->content),
 	&copy, line));
 }
-/*
-int main()
-{
-	char *line;
-	get_next_line(0, &line);
-}*/
