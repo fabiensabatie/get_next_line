@@ -32,7 +32,7 @@ t_list		*find_list(t_list *list, int fd)
 	return (list);
 }
 
-int 		check_line(char **content, char **copy, char **line)
+int			check_line(char **content, char **copy, char **line)
 {
 	if (!(**copy) && !ft_strchr(*copy, '\n'))
 		return (0);
